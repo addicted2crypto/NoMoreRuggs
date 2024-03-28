@@ -1,14 +1,15 @@
 const hre = require("hardhat");
-const { EDIT_DISTANCE_THRESHOLD } = require('hardhat/internal/constants');
 
 async function main() {
 
     const [deployer] = await ethers.getSigners();
 
     console.log("Deploying contract with account:" , deployer.address);
-    console.log("Account balances:" ,(await deployer.getBalance()).toString());
+    // console.log("Account balances:" ,(await deployer.getBalance()).toString());
 
-    const NoMoreRuggs = await hre.ethers.getContractFactory("nomoreruggs");
+    //this factory lets us deploy
+    const NoMoreRuggs = await hre.ethers.getContractFactory("NoMoreRuggs");
+    //this will deploy with 42 milly tokens
     const token = await NoMoreRuggs.deploy(42000000000);
 
     await token.deployed();
