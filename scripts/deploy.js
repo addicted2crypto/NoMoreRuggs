@@ -15,7 +15,7 @@ async function main() {
     await token.waitForDeployment();
 
     console.log("Token address:", token.getAddress);
-    console.log("Account balances:" ,(await NoMoreRuggs()).toString());
+    console.log("Account balances:" ,(await token.getAddress()).toString());
 
     await hre.run("verify:verify", {
         address: token.address,
