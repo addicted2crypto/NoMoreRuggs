@@ -9,7 +9,7 @@ contract NoMoreRuggs is ERC20, AccessControl {
     //Creates a new role for the minter
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    constructor(uint256 initialSupply) ERC20("NoMoreRuggs", "Ruggs"){
+    constructor(uint256 initialSupply) ERC20("NoMoreRuggs", "NoRuggs"){
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
         _mint(msg.sender, initialSupply * 10 ** decimals());
