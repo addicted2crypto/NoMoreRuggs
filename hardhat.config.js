@@ -23,7 +23,7 @@ module.exports = {
 
 
 
-  // avax here
+  // avax here snowtrace etc
   etherscan: {
     //Api key from https://etherscan.io/apikey
     apiKey:{
