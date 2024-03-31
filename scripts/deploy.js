@@ -9,8 +9,8 @@ async function main() {
     
     //this factory lets us deploy
     const NoMoreRuggs = await hre.ethers.getContractFactory("NoMoreRuggs");
-    //this will deploy with 42 milly tokens
-    const token = await NoMoreRuggs.deploy(42000000000);
+    //this will deploy with 42 billy tokens
+    const token = await NoMoreRuggs.deploy(420000000000);
 
     await token.waitForDeployment();
 
@@ -19,7 +19,7 @@ async function main() {
 
     await hre.run("verify:verify", {
         address: token.address,
-        constructorArguments: [42000000000]
+        constructorArguments: [420000000000]
 
     });
 }
