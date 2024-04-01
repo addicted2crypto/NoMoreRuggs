@@ -30,6 +30,6 @@ module.exports = {
       mainnet: [process.env.ETHERSCAN_API_KEY],
       //this will be for the glorius avax keys
 
-    }
-  }
+    },
+  },
 };
