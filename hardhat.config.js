@@ -28,6 +28,7 @@ module.exports = {
   etherscan: {
     //Api key from https://etherscan.io/apikey
     apiKey:{
+      apiKey: process.env.ETHERSCAN_API_KEY,
       mainnet: [process.env.ETHERSCAN_API_KEY],
       //this will be for the glorius avax keys
 
