@@ -16,7 +16,7 @@ async function main() {
     const token = await NoMoreRuggs.deploy(4200000000000);
     const contract = await NoMoreRuggs.deploy(...constructorArguments);
 
-    // await contract.deployTransaction.wait(5);
+    // await contract.deployTransaction.wait(5); find out this lines meaning
     // await token.waitForDeployment(); depreciated??
 
     console.log(`Token address:" ${contract.address}`);
